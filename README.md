@@ -1,3 +1,13 @@
+# Второе задание Frontend часть
+### Голеусова Анжелика
+
+
+![alt text](images/showTable.png)
+![alt text](images/addingTable.png)
+![alt text](images/addedUser.png)
+![alt text](images/editingUser.png)
+![alt text](images/removedUsers.png)
+
 # EpolTask2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.

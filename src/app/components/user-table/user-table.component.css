@@ -12,5 +12,11 @@ th.mat-sort-header-sorted {
 }
 
 .example-form-field {
-  width: 200px;
+  width: auto;
+  max-width: 100%;
+  display: flex;
+}
+
+.example-form-field .mat-form-field-infix {
+  width: auto !important;
 }
