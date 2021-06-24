@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+.add {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.example-form-field {
+  width: 200px;
+}
