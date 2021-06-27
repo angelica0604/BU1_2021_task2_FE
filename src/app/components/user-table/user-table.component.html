@@ -1,4 +1,5 @@
-<br>
+<div class="first">
+  <div class="two">
 <mat-form-field class="example-form-field">
   <mat-label>Поиск</mat-label>
   <input matInput type="text" [(ngModel)]="search">
@@ -6,12 +7,19 @@
     <mat-icon>close</mat-icon>
   </button>
 </mat-form-field>
+  </div>
+  <div class="three">
 <button (click)="clickSearch()" mat-icon-button color="primary">
   <mat-icon>manage_search</mat-icon>
 </button>
+  </div>
+  <div class="four">
 <button (click)="clickClear()" mat-icon-button color="primary">
   <mat-icon>clear</mat-icon>
 </button>
+  </div>
+</div>
+
 
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 

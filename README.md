@@ -7,6 +7,7 @@
 ![alt text](images/addedUser.png)
 ![alt text](images/editingUser.png)
 ![alt text](images/removedUsers.png)
+![alt text](images/addedSearch.png)
 
 # EpolTask2
 

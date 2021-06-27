@@ -20,3 +20,7 @@ th.mat-sort-header-sorted {
 .example-form-field .mat-form-field-infix {
   width: auto !important;
 }
+.first {
+  display: flex;
+  align-items: baseline;
+}

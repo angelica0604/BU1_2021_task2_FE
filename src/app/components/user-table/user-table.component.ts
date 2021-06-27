@@ -213,5 +213,7 @@ export class UserTableComponent implements AfterViewInit {
 
   clickClear() {
 this.dataSource.data = ELEMENT_DATA;
+    this.search = '';
   }
+
 }
