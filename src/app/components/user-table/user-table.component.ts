@@ -87,27 +87,28 @@ export class UserTableComponent implements AfterViewInit {
   backupUser: User;
 
   inputUser: User;
+
   constructor() {
     this.inputUser = this.inputClient();
     this.backupUser = this.inputClient();
   }
-inputClient() {
-  let inputUser = {
-    name: '',
-    id: '',
-    age: 0,
-    gender: '',
-    company: '',
-    email: '',
-    phone: '',
-    address: '',
-    state: '',
-  };
-  return inputUser;
-}
+
+  inputClient() {
+    let inputUser = {
+      name: '',
+      id: '',
+      age: 0,
+      gender: '',
+      company: '',
+      email: '',
+      phone: '',
+      address: '',
+      state: '',
+    };
+    return inputUser;
+  }
 
   @ViewChild(MatSort) sort!: MatSort;
-
 
 
   ngAfterViewInit(): void {
@@ -160,8 +161,8 @@ inputClient() {
   }
 
   clickEdit(user: User) {
-    if(!this.isEditing) {
-      user.state='add';
+    if (!this.isEditing) {
+      user.state = 'add';
       this.inputUser = user;
       this.isEditing = true;
       this.backupUser.id = user.id;
@@ -178,11 +179,11 @@ inputClient() {
 
   clickedCancel(user: User) {
     user.state = '';
-    if(this.isAdding) {
+    if (this.isAdding) {
       this.clickedDelete(this.inputUser);
       this.inputUser = this.inputClient();
       this.isAdding = false;
-    } else if(this.isEditing) {
+    } else if (this.isEditing) {
       this.isEditing = false;
       user.id = this.backupUser.id;
       user.name = this.backupUser.name;
@@ -196,5 +197,21 @@ inputClient() {
     console.log(user);
 
   }
-}
 
+  clickSearch() {
+    let resultSearch = [];
+    for (let elem of ELEMENT_DATA) {
+      if (elem.id.includes(this.search) || elem.address.includes(this.search) ||
+        String(elem.age).includes(this.search) || elem.phone.includes(this.search) ||
+        elem.company.includes(this.search) || elem.email.includes(this.search) ||
+        elem.gender.includes(this.search)) {
+        resultSearch.push(elem);
+      }
+    }
+    this.dataSource.data = resultSearch;
+  }
+
+  clickClear() {
+this.dataSource.data = ELEMENT_DATA;
+  }
+}

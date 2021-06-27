@@ -1,6 +1,16 @@
-<input matInput type="text" [(ngModel)]="search">
-<button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-  <mat-icon>close</mat-icon>
+<br>
+<mat-form-field class="example-form-field">
+  <mat-label>Поиск</mat-label>
+  <input matInput type="text" [(ngModel)]="search">
+  <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+<button (click)="clickSearch()" mat-icon-button color="primary">
+  <mat-icon>manage_search</mat-icon>
+</button>
+<button (click)="clickClear()" mat-icon-button color="primary">
+  <mat-icon>clear</mat-icon>
 </button>
 
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
